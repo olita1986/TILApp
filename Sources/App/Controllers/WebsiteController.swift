@@ -392,8 +392,7 @@ extension RegisterData: Validatable, Reflectable {
                 .alphanumeric && .count(3...))
             try validations.add(\.password, .count(8...))
             try validations.add(\.emailAddress, .email)
-            // 7
-            // 1
+
             validations.add("passwords match") { model in
                 // 2
                 guard model.password == model.confirmPassword else {
